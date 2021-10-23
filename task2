@@ -1,0 +1,20 @@
+#labtask2
+
+exp=input(" Please Enter an  expression:")
+variable1=0
+print(exp)
+counter=0
+for i in exp:
+ if(i=='(' or i=='[' or i=='{'):
+    print(i)
+    counter=counter+1
+ if(i==')' or i==']' or i=='}'):
+   if(counter==0):
+     print("Invalid expression")
+     variable1=variable1+1
+   else:
+     counter=counter-1
+if(counter==0 and variable1==0):
+ print("Expression you entered is balanced")
+else:
+ print("Expression you entered is unbalanced")
