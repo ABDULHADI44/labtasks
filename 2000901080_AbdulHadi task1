@@ -1,0 +1,16 @@
+
+#Labtask1
+	
+
+	str=input("Please Enter a string: ")
+	str2=''
+	stack1=[]
+	for i in str:
+	 stack1.append(i)
+	while len(stack1)!=0:
+	 str2=str2+stack1.pop()
+	if(str2==str):
+	 print("The string entered by you is palendrom")
+	else:
+	 print("The string entered by you is not a palendrom")
+	
