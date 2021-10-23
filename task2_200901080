@@ -1,0 +1,18 @@
+# task 2
+exp=input("Please Enter an expression")
+stack1=[]
+variable1=0
+for i in exp:
+ if(i=='[' or i=='(' or i=='{'):
+    stack1.append(i)
+ if(i==']' or i==')' or i=='}'):
+   if(len(stack1)==0):
+      print("Unbalanced")
+      var1=variable1+1;
+   else:
+    print(stack1.pop())
+
+if ((len(stack1)==0) and variable1==0):
+  print("Expression balanced")
+else:
+  print("Expression unbalanced")
