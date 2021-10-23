@@ -1,20 +1,19 @@
 #labtask2
 
-exp=input(" Please Enter an  expression:")
+ exp=input("Please Enter an expression")
+stack1=[]
 variable1=0
-print(exp)
-counter=0
 for i in exp:
- if(i=='(' or i=='[' or i=='{'):
-    print(i)
-    counter=counter+1
- if(i==')' or i==']' or i=='}'):
-   if(counter==0):
-     print("Invalid expression")
-     variable1=variable1+1
+ if(i=='[' or i=='(' or i=='{'):
+    stack1.append(i)
+ if(i==']' or i==')' or i=='}'):
+   if(len(stack1)==0):
+      print("Unbalanced")
+      var1=variable1+1;
    else:
-     counter=counter-1
-if(counter==0 and variable1==0):
- print("Expression you entered is balanced")
+    print(stack1.pop())
+
+if ((len(stack1)==0) and variable1==0):
+  print("Expression balanced")
 else:
- print("Expression you entered is unbalanced")
+  print("Expression unbalanced")
